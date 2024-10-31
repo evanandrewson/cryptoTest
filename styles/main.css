@@ -1,0 +1,156 @@
+:root {
+    --primary-color: #1a237e;
+    --secondary-color: #0d47a1;
+    --accent-color: #1565c0;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --background-light: #f4f4f4;
+    --card-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: var(--background-light);
+}
+
+.header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-light);
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--accent-color);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: var(--secondary-color);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.social-links a {
+    color: var(--text-light);
+    font-size: 1.5rem;
+}
+
+.roadmap {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.roadmap::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: var(--primary-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.roadmap-item {
+    margin: 2rem 0;
+    position: relative;
+    width: 50%;
+    padding: 0 2rem;
+}
+
+.roadmap-item:nth-child(odd) {
+    left: 0;
+}
+
+.roadmap-item:nth-child(even) {
+    left: 50%;
+}
+
+.tokenomics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+    .tokenomics {
+        grid-template-columns: 1fr;
+    }
+    
+    .roadmap-item {
+        width: 100%;
+        left: 0 !important;
+    }
+} 
